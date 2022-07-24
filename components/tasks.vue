@@ -44,16 +44,16 @@ export default {
   },
   methods: {
     addTask() {
-      const allTasks = JSON.parse(localStorage.getItem("lists"));
-      const v1 = allTasks.find((task) => task.id == this.listTasks.id);
-      let taskObj = {
-        id: Date.now(),
-        name: this.taskname,
-        complete: false,
-      };
-      localStorage.setItem(v1.id, JSON.stringify(taskObj));
-      console.log(JSON.parse(localStorage.getItem("lists")));
-      this.taskname = "";
+      // const allTasks = JSON.parse(localStorage.getItem("lists"));
+      // const v1 = allTasks.find((task) => task.id == this.listTasks.id);
+      // let taskObj = {
+      //   id: Date.now(),
+      //   name: this.taskname,
+      //   complete: false,
+      // };
+      // localStorage.setItem(v1.id, JSON.stringify(taskObj));
+      // console.log(JSON.parse(localStorage.getItem("lists")));
+      // this.taskname = "";
     },
   },
   mounted() {
