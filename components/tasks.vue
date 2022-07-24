@@ -57,8 +57,7 @@ export default {
     },
   },
   mounted() {
-      localStorage.setItem(this.listTasks.id, JSON.stringify());
-
+    localStorage.setItem(this.listTasks.id, JSON.stringify());
   },
   computed: {
     listTasks() {
