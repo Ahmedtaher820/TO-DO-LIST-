@@ -226,4 +226,8 @@ h1 {
 .my-list ul.my-lists li:hover {
   opacity: .7;
 }
+
+.my-list form .new {
+  color: #f1f1f1;
+}
 /*# sourceMappingURL=main.css.map */

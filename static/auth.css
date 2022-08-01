@@ -267,6 +267,7 @@ h1 {
   top: 20%;
   right: 10px;
   color: #333;
+  cursor: pointer;
 }
 
 .restPassowrd .rest-box input {

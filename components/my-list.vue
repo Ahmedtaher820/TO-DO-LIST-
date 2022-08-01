@@ -1,16 +1,16 @@
 <template>
   <div class="my-list">
     <h2 class="fs-2 text-light fw-bold">My List</h2>
-    <ul class="my-lists mt-4 mb-3" >
+    <!-- <ul class="my-lists mt-4 mb-3" > -->
       <!-- <li v-for="(listData, index) in allTasks" :class="`${index == 0 ? 'active': ''}`" :key="index" @click="showList(index)">
         {{ listData.listname }}
       </li> -->
-    </ul>
+    <!-- </ul> -->
     <form action="" @submit.prevent="addList">
       <button class="button-action" type="submit">+</button>
       <input
         type="text"
-        v-model="listname"
+        v-model="list"
         class="new"
         placeholder="new list name"
       />
@@ -23,16 +23,14 @@ export default {
   name: "My-List",
   data() {
     return {
-      listname:'',
+      list:'',
       allTasks: [],
     };
   },
   methods: {
     addList() {
-
-  },
-  mounted() {
-
+      console.log("done")
+      this.$store.dispatch("addList",this.list)
   },
 }
 }
