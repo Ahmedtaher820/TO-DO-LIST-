@@ -17,11 +17,19 @@ export default {
         rel: "stylesheet",
         href: "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css",
       },
+      {
+        rel:"stylesheet",
+        href:"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+      },
+      {
+        rel:"stylesheet",
+        href:"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      }
     ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/static/main.css'],
+  css: ['@/static/main.css','@/static/auth.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],

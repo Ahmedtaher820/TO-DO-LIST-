@@ -13,14 +13,12 @@
 <script>
 export default {
   name: "Task",
-  props:["id"],
   data(){
     return{
 
     }
   },
   mounted(){
-    console.log(JSON.parse(localStorage.getItem(this.id)))
   }
 };
 </script>

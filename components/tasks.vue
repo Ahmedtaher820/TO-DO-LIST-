@@ -1,5 +1,5 @@
 <template>
-  <div class="tasks-container" v-if="listTasks.listname">
+  <div class="tasks-container" >
     <div
       class="
         tasks-heading
@@ -9,12 +9,12 @@
         p-3
       "
     >
-      <h4 class="fw-bold fs-4 text-dark mb-0">{{ listTasks.listname }}</h4>
+      <h4 class="fw-bold fs-4 text-dark mb-0"></h4>
       <p class="text-secondary mb-0">3 tasks remaning</p>
     </div>
     <div class="tasks-body p-3">
       <div class="tasks">
-        <task :id="listTasks.id" />
+        <task  />
       </div>
       <div class="add-task pt-2">
         <form action="" @submit.prevent="addTask">
@@ -57,12 +57,9 @@ export default {
     },
   },
   mounted() {
-    localStorage.setItem(this.listTasks.id, JSON.stringify());
   },
   computed: {
-    listTasks() {
-      return this.$store.state.listTasks;
-    },
+
   },
   watch: {},
 };
