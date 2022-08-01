@@ -75,6 +75,10 @@ h1 {
   opacity: .5;
 }
 
+.logout {
+  color: white;
+}
+
 .tasks-container {
   min-width: 400px;
 }

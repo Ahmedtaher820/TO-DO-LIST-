@@ -75,6 +75,10 @@ h1 {
   opacity: .5;
 }
 
+.logout {
+  color: white;
+}
+
 .login-page {
   background-color: #f1f1f1;
 }
