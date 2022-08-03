@@ -1,0 +1,30 @@
+[
+  {
+    "name": "join",
+    "path": "/join",
+    "component": "D:\\\\web\\\\myProject\\\\nuxt\\\\NUXT-APPS\\\\to-do-list\\\\pages\\\\join.vue",
+    "chunkName": "pages/join",
+    "_name": "_29279824"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "D:\\\\web\\\\myProject\\\\nuxt\\\\NUXT-APPS\\\\to-do-list\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_95367742"
+  },
+  {
+    "name": "restPassword",
+    "path": "/restPassword",
+    "component": "D:\\\\web\\\\myProject\\\\nuxt\\\\NUXT-APPS\\\\to-do-list\\\\pages\\\\restPassword.vue",
+    "chunkName": "pages/restPassword",
+    "_name": "_f5ef35ee"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\web\\\\myProject\\\\nuxt\\\\NUXT-APPS\\\\to-do-list\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_2885bd70"
+  }
+]
