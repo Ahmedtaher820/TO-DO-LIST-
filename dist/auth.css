@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Josefin+Sans:wght@200;300;400;500;600;700&family=La+Belle+Aurore&family=Lobster&family=Lora:ital,wght@1,400;1,500;1,600;1,700&family=Mochiy+Pop+One&family=Open+Sans:wght@300;400;500;600;700&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800&family=Quicksand:wght@300;400;600;700&family=Raleway:ital,wght@0,500;0,700;1,400&family=Roboto:wght@100&family=Shadows+Into+Light&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: calc(6vw + 2rem);
+  color: rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: -20px;
+}
+
+.to-do-list {
+  background-color: #5bb0e9;
+  min-height: 100vh;
+}
+
+.button-action {
+  background-color: transparent;
+  border: none;
+  padding: 0px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  opacity: 1;
+  -webkit-transition: .5s opacity ease-in-out;
+  transition: .5s opacity ease-in-out;
+}
+
+.button-action:hover {
+  opacity: .2;
+}
+
+.new {
+  border: none;
+  outline: none;
+  padding: 8px 0px;
+  background-color: transparent;
+  border-bottom: 1px solid;
+  border-bottom-color: white;
+  -webkit-transition: border-width .3s;
+  transition: border-width .3s;
+}
+
+.new:focus {
+  border-width: 3px;
+}
+
+::-webkit-input-placeholder {
+  color: #eeeeee;
+  opacity: .5;
+}
+
+:-ms-input-placeholder {
+  color: #eeeeee;
+  opacity: .5;
+}
+
+::-ms-input-placeholder {
+  color: #eeeeee;
+  opacity: .5;
+}
+
+::placeholder {
+  color: #eeeeee;
+  opacity: .5;
+}
+
+.logout {
+  color: white;
+}
+
+.fa-arrow-right-from-bracket {
+  position: absolute;
+  z-index: 2;
+  top: 2.5vw;
+  right: 30px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+.login-page {
+  background-color: #f1f1f1;
+}
+
+.login-page .login-box {
+  width: 80%;
+  height: 80vh;
+  -webkit-box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-page .login-box .form {
+  background-color: #fff;
+  width: 50%;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.login-page .login-box .form form {
+  height: 100%;
+  padding: 40px 80px;
+  color: #333;
+}
+
+.login-page .login-box .form form ::-webkit-input-placeholder {
+  color: #222;
+  font-size: 16px;
+}
+
+.login-page .login-box .form form :-ms-input-placeholder {
+  color: #222;
+  font-size: 16px;
+}
+
+.login-page .login-box .form form ::-ms-input-placeholder {
+  color: #222;
+  font-size: 16px;
+}
+
+.login-page .login-box .form form ::placeholder {
+  color: #222;
+  font-size: 16px;
+}
+
+.login-page .login-box .form form h3 {
+  position: relative;
+}
+
+.login-page .login-box .form form h3::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 30%;
+  background-color: #5bb0e9;
+  height: 2px;
+}
+
+.login-page .login-box .form form h3::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -55px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 30%;
+  background-color: #5bb0e9;
+  height: 2px;
+}
+
+.login-page .login-box .form form .social-list li {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #5bb0e9;
+  text-align: center;
+  line-height: 33px;
+  background-color: #5bb0e9;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.login-page .login-box .form form .social-list li i {
+  font-size: 16px;
+}
+
+.login-page .login-box .form form .social-list li:hover {
+  background-color: white;
+  color: #5bb0e9;
+  border: 2px solid #5bb0e9;
+}
+
+.login-page .login-box .form form .form-inputs {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-page .login-box .form form .form-inputs input {
+  padding: 5px 15px;
+  background-color: rgba(238, 238, 238, 0.793);
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.login-page .login-box .form form .form-inputs i {
+  cursor: pointer;
+  right: 10px;
+  top: 20%;
+}
+
+.login-page .login-box .form form .form-inputs a {
+  text-decoration: none;
+  color: #333;
+}
+
+.login-page .login-box .form form .form-inputs button {
+  padding: 8px 48px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  color: #fff;
+  background-color: #5bb0e9;
+  border: 2px solid #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.login-page .login-box .form form .form-inputs button:hover {
+  background-color: white;
+  color: #5bb0e9;
+  border: 2px solid #5bb0e9;
+}
+
+.login-page .login-box > div {
+  width: 50%;
+  background-color: #5bb0e9;
+  color: #f1f1f1;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.right-box a {
+  text-decoration: none;
+  padding: 8px 45px;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.right-box a:hover {
+  background-color: #fff;
+  color: #5bb0e9;
+  border: 2px solid #5bb0e9;
+}
+
+.restPassowrd {
+  background-color: #5bb0e9;
+}
+
+.restPassowrd .rest-box {
+  width: 40%;
+  padding: 40px;
+  background-color: #fff;
+  color: #5bb0e9;
+}
+
+.restPassowrd .rest-box p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.restPassowrd .rest-box .pass-box {
+  width: 100%;
+}
+
+.restPassowrd .rest-box .pass-box i {
+  position: absolute;
+  top: 20%;
+  right: 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.restPassowrd .rest-box input {
+  width: 100%;
+  border: 1px solid rgba(51, 51, 51, 0.327);
+  outline: none;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.restPassowrd .rest-box input::-webkit-input-placeholder {
+  color: rgba(51, 51, 51, 0.327);
+  opacity: 1;
+}
+
+.restPassowrd .rest-box input:-ms-input-placeholder {
+  color: rgba(51, 51, 51, 0.327);
+  opacity: 1;
+}
+
+.restPassowrd .rest-box input::-ms-input-placeholder {
+  color: rgba(51, 51, 51, 0.327);
+  opacity: 1;
+}
+
+.restPassowrd .rest-box input::placeholder {
+  color: rgba(51, 51, 51, 0.327);
+  opacity: 1;
+}
+
+.restPassowrd .rest-box button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 16px;
+  background-color: #5bb0e9;
+  color: white;
+  -webkit-box-shadow: 0px 0px 10px #5bb0e994;
+          box-shadow: 0px 0px 10px #5bb0e994;
+}
+/*# sourceMappingURL=auth.css.map */

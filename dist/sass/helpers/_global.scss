@@ -5,10 +5,11 @@
   margin: 0px;
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
-  color: white;
   font-size: 1.1rem;
 }
-
+#app{
+  min-height: 100vh;
+}
 h1 {
   font-size: calc(6vw + 2rem);
   color: rgba(0,0,0,.1);
@@ -55,4 +56,22 @@ h1 {
 @mixin  centerItems {
   display: flex;
   align-items: center;
+}
+// error handle
+// .err{
+//   padding: 10px;
+// }
+.logout{
+  color: white;
+
+}
+//logout section
+.fa-arrow-right-from-bracket {
+  position: absolute;
+  z-index: 2;
+  top: 2.5vw;
+  right: 30px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
 }

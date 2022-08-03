@@ -1,0 +1,196 @@
+.login-page {
+  background-color: #f1f1f1;
+
+  .login-box {
+    width: 80%;
+    height: 80vh;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+
+    .form {
+      background-color: #fff;
+      width: 50%;
+      border-radius: 10px 0px 0px 10px;
+
+      form {
+        height: 100%;
+        padding: 40px 80px;
+        color: $secondcolor;
+
+        ::placeholder {
+          color: #222;
+          font-size: 16px;
+        }
+
+        h3 {
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            transform: translateX(-50%);
+            width: 30%;
+            background-color: $maincolor;
+            height: 2px;
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -55px;
+            transform: translateX(-50%);
+            width: 30%;
+            background-color: $maincolor;
+            height: 2px;
+
+          }
+        }
+
+        .social-list {
+          li {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid $maincolor;
+            text-align: center;
+            line-height: 33px;
+            background-color: $maincolor;
+            color: white;
+            cursor: pointer;
+            transition: .3s;
+
+            i {
+              font-size: 16px;
+            }
+
+            &:hover {
+              background-color: white;
+              color: $maincolor;
+              border: 2px solid $maincolor;
+            }
+          }
+        }
+
+        .form-inputs {
+          margin-top: 10px;
+          width: 100%;
+          text-align: center;
+
+          input {
+            padding: 5px 15px;
+            background-color: rgba(238, 238, 238, 0.793);
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            width: 100%;
+          }
+
+          i {
+            cursor: pointer;
+            right: 10px;
+            top: 20%;
+          }
+
+          a {
+            text-decoration: none;
+            color: $secondcolor;
+          }
+
+          button {
+            padding: 8px 48px;
+            border: none;
+            outline: none;
+            border-radius: 25px;
+            color: #fff;
+            background-color: $maincolor;
+            border: 2px solid #fff;
+            transition: .3s;
+
+            margin: {
+              left: auto;
+              right: auto;
+              top: 10px;
+            }
+
+            &:hover {
+              background-color: white;
+              color: $maincolor;
+              border: 2px solid $maincolor;
+            }
+          }
+        }
+      }
+    }
+
+    >div {
+      width: 50%;
+      background-color: $maincolor;
+      color: #f1f1f1;
+      border-radius: 0px 10px 10px 0px;
+    }
+  }
+}
+
+.right-box {
+  a {
+    text-decoration: none;
+    padding: 8px 45px;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    color: #fff;
+    transition: .3s;
+    &:hover {
+      background-color: #fff;
+      color: $maincolor;
+      border: 2px solid $maincolor;
+
+    }
+  }
+}
+.restPassowrd{
+  background-color: $maincolor;
+  .rest-box{
+    width: 40%;
+    padding: 40px;
+    background-color: #fff;
+    color: $maincolor;
+    p{
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .pass-box{
+      width: 100%;
+      i{
+        position: absolute;
+        top: 20%;
+        right: 10px;
+        color: $secondcolor;
+        cursor: pointer;
+      }
+    }
+    input{
+      width: 100%;
+      border: 1px solid rgba(51, 51, 51, 0.327);
+      outline: none;
+      text-align: center;
+      padding: 10px 0px;
+      &::placeholder{
+        color: rgba(51, 51, 51, 0.327);
+        opacity: 1;
+      }
+    }
+    button{
+      border: none;
+      outline: none;
+      padding: 10px ;
+      margin-top: 15px;
+      font-size: 16px;
+      background-color: $maincolor;
+      color: white;
+      box-shadow: 0px 0px 10px #5bb0e994;
+    }
+  }
+}

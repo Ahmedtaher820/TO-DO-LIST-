@@ -5,8 +5,11 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
-  color: white;
   font-size: 1.1rem;
+}
+
+#app {
+  min-height: 100vh;
 }
 
 h1 {
@@ -70,6 +73,20 @@ h1 {
 ::placeholder {
   color: #eeeeee;
   opacity: .5;
+}
+
+.logout {
+  color: white;
+}
+
+.fa-arrow-right-from-bracket {
+  position: absolute;
+  z-index: 2;
+  top: 2.5vw;
+  right: 30px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
 }
 
 .tasks-container {
@@ -222,5 +239,9 @@ h1 {
 
 .my-list ul.my-lists li:hover {
   opacity: .7;
+}
+
+.my-list form .new {
+  color: #f1f1f1;
 }
 /*# sourceMappingURL=main.css.map */
