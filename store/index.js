@@ -6,6 +6,7 @@ export const state = () => ({
   handleUserAccountError: "",
   emailIsTrue: false,
   usertoken: "",
+  logOut: false,
 });
 export const mutations = {
   handleSignUpError(state, payload) {
@@ -26,6 +27,18 @@ export const mutations = {
   setUserToken(state, payload) {
     state.userToken = payload;
   },
+  setLogout(state, payload) {
+    state.logOut = payload;
+  },
+  // User Logout
+  userLogOut(state) {
+    localStorage.removeItem("user-list-token");
+    state.logOut = false;
+    $nuxt.$router.push("/login");
+  },
+  setUserLogOut(state, payload) {
+    state.logOut = payload;
+  },
 };
 export const actions = {
   // Sign In Function
@@ -37,7 +50,9 @@ export const actions = {
       );
       console.log(userDataSingUp);
       localStorage.setItem("user-list-token", userDataSingUp.data.token);
-      commit("setUserToken", userDataSignIn.data.token);
+      commit("setUserToken", userDataSingUp.data.token);
+      commit("setLogout", true);
+
       $nuxt.$router.push("/");
     } catch (error) {
       commit("handleSignUpError", error.response.data.message);
@@ -53,6 +68,7 @@ export const actions = {
       console.log(userDataSignIn);
       localStorage.setItem("user-list-token", userDataSignIn.data.token);
       commit("setUserToken", userDataSignIn.data.token);
+      commit("setLogout", true);
       $nuxt.$router.push("/");
     } catch (error) {
       commit("handleSignInError", error.response.data.message);
@@ -69,6 +85,7 @@ export const actions = {
         }
       );
       console.log(getRestUserAccount);
+
       commit("emailIsTrue", true);
     } catch (error) {
       commit("handleForgetError", error.response.data.message);
@@ -85,8 +102,9 @@ export const actions = {
         `https://todo-list45.herokuapp.com/api/user/restPassword/${code}`,
         userPass
       );
-      $nuxt.$router.push("/login")
+      $nuxt.$router.push("/login");
       commit("emailIsTrue", false);
+      $nuxt.$router.push("/login");
     } catch (error) {
       commit("handleUserAccountError", error.response.data.message);
     }
@@ -94,17 +112,15 @@ export const actions = {
   // Add List
   async addList({ commit, state }, payload) {
     // let userToken = JSON.parse(localStorage.getItem("user-list-token"));
-    // console.log(userToken)
+    console.log(state.userToken);
     console.log(payload);
     try {
       let listAdded = await axios.post(
         `https://todo-list45.herokuapp.com/api/list/createList`,
+
         {
-          headers: {
-            "x-auth-token": `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmU3MzJlODljNGNmNmEyNDc3MjhiNDAiLCJpYXQiOjE2NTkzNjU4MzB9.vykYVUYrTcrf3xuMBWfFs5mfqec6wk_-H5TE4E7nVrM`,
-          },
-        },
-        payload
+          list: payload,
+        }
       );
       console.log(listAdded);
     } catch (error) {

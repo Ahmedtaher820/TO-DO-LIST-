@@ -7,9 +7,6 @@
         <tasks />
       </div>
     </div>
-    <div class="position-absolute logout" @click="logOut">
-      <i class="fa-solid fa-person-from-portal"></i>
-    </div>
   </div>
 </template>
 
@@ -17,16 +14,18 @@
 import MyList from "../components/my-list.vue";
 import tasks from "../components/tasks.vue";
 export default {
+  head:{
+    title:"Home Page",
+    meta:[
+      {charset="utf-8"},
+      {name:"viewport",content="width=devcice-width;initial-scale=1.0"},
+      {hid:"description",name:"description",content:"Home Page For Lists and Tasks"}
+    ]
+  },
   name: "IndexPage",
 
   components: {
     MyList,
     tasks,
   },
-  methods:{
-    logOut(){
-      localStorage.removeItem("user-list-token")
-      this.$router.push("/login")
-    }
-  }
 };

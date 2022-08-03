@@ -6,8 +6,8 @@
         {{ listData.listname }}
       </li> -->
     <!-- </ul> -->
-    <form action="" @submit.prevent="addList">
-      <button class="button-action" type="submit">+</button>
+    <form action="">
+      <button class="button-action"  type="button"  @click="addList">+</button>
       <input
         type="text"
         v-model="list"

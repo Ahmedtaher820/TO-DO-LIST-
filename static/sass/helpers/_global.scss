@@ -63,5 +63,15 @@ h1 {
 // }
 .logout{
   color: white;
-  
+
+}
+//logout section
+.fa-arrow-right-from-bracket {
+  position: absolute;
+  z-index: 2;
+  top: 2.5vw;
+  right: 30px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
 }

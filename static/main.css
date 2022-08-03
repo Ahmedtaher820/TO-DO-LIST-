@@ -79,6 +79,16 @@ h1 {
   color: white;
 }
 
+.fa-arrow-right-from-bracket {
+  position: absolute;
+  z-index: 2;
+  top: 2.5vw;
+  right: 30px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
 .tasks-container {
   min-width: 400px;
 }
