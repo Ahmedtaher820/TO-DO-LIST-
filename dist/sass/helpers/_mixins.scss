@@ -1,0 +1,18 @@
+@mixin  centerItems {
+  display: flex;
+  align-items: center;
+}
+// mixins media query
+
+@mixin media($mediaSize) {
+  @if $mediaSize == 'mobile' {
+    @media (max-width:991px) {
+      @content;
+    }
+  }
+  @else if $mediaSize == "medium" {
+    @media (min-width : 992px) {
+      @content;
+    }
+  }
+}

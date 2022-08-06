@@ -5,17 +5,25 @@
     width: 80%;
     height: 80vh;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
-
+    @include media(mobile) {
+      width: 90%;
+      height: 90vh;
+    }
     .form {
       background-color: #fff;
       width: 50%;
       border-radius: 10px 0px 0px 10px;
-
+      @include media(mobile) {
+        width: 100%;
+      }
       form {
         height: 100%;
         padding: 40px 80px;
         color: $secondcolor;
+        @include media(mobile) {
+          padding: 20px 40px;
 
+        }
         ::placeholder {
           color: #222;
           font-size: 16px;
@@ -25,7 +33,7 @@
           position: relative;
 
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             top: 50%;
             left: -20px;
@@ -36,15 +44,15 @@
           }
 
           &::before {
-            content: '';
+            content: "";
             position: absolute;
+            top: 50%;
             top: 50%;
             right: -55px;
             transform: translateX(-50%);
             width: 30%;
             background-color: $maincolor;
             height: 2px;
-
           }
         }
 
@@ -59,7 +67,7 @@
             background-color: $maincolor;
             color: white;
             cursor: pointer;
-            transition: .3s;
+            transition: 0.3s;
 
             i {
               font-size: 16px;
@@ -107,7 +115,7 @@
             color: #fff;
             background-color: $maincolor;
             border: 2px solid #fff;
-            transition: .3s;
+            transition: 0.3s;
 
             margin: {
               left: auto;
@@ -125,7 +133,7 @@
       }
     }
 
-    >div {
+    > div {
       width: 50%;
       background-color: $maincolor;
       color: #f1f1f1;
@@ -141,29 +149,36 @@
     border-radius: 30px;
     border: 2px solid #fff;
     color: #fff;
-    transition: .3s;
+    transition: 0.3s;
     &:hover {
       background-color: #fff;
       color: $maincolor;
       border: 2px solid $maincolor;
-
     }
   }
+  @include media(mobile) {
+    display: none !important;
+  }
 }
-.restPassowrd{
+.restPassowrd {
   background-color: $maincolor;
-  .rest-box{
+  .rest-box {
     width: 40%;
     padding: 40px;
     background-color: #fff;
     color: $maincolor;
-    p{
+    @include media(mobile) {
+      width: 85%;
+      padding: 20px;
+      margin-top: 60px;
+    }
+    p {
       font-size: 15px;
       font-weight: 600;
     }
-    .pass-box{
+    .pass-box {
       width: 100%;
-      i{
+      i {
         position: absolute;
         top: 20%;
         right: 10px;
@@ -171,26 +186,34 @@
         cursor: pointer;
       }
     }
-    input{
+    input {
       width: 100%;
       border: 1px solid rgba(51, 51, 51, 0.327);
       outline: none;
       text-align: center;
       padding: 10px 0px;
-      &::placeholder{
+      &::placeholder {
         color: rgba(51, 51, 51, 0.327);
         opacity: 1;
       }
     }
-    button{
+    button {
       border: none;
       outline: none;
-      padding: 10px ;
+      padding: 10px;
       margin-top: 15px;
       font-size: 16px;
       background-color: $maincolor;
       color: white;
       box-shadow: 0px 0px 10px #5bb0e994;
     }
+  }
+}
+.sign-link-sm {
+  @include media(mobile) {
+    display: block;
+  }
+  @include media(medium) {
+    display: none;
   }
 }

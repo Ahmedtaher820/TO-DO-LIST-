@@ -1,0 +1,35 @@
+{
+  "entry": "server.js",
+  "files": {
+    "components/auth-confirm-account.js": "components/auth-confirm-account.js",
+    "components/auth-confirm-email.js": "components/auth-confirm-email.js",
+    "components/auth-right-box.js": "components/auth-right-box.js",
+    "components/auth-signin-signup.js": "components/auth-signin-signup.js",
+    "components/auth-signin.js": "components/auth-signin.js",
+    "components/auth-signup.js": "components/auth-signup.js",
+    "components/my-list.js": "components/my-list.js",
+    "components/task.js": "components/task.js",
+    "components/tasks.js": "components/tasks.js",
+    "pages/index.js": "pages/index.js",
+    "pages/join.js": "pages/join.js",
+    "pages/login.js": "pages/login.js",
+    "pages/restPassword.js": "pages/restPassword.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "components/auth-confirm-account.js": "components/auth-confirm-account.js.map",
+    "components/auth-confirm-email.js": "components/auth-confirm-email.js.map",
+    "components/auth-right-box.js": "components/auth-right-box.js.map",
+    "components/auth-signin-signup.js": "components/auth-signin-signup.js.map",
+    "components/auth-signin.js": "components/auth-signin.js.map",
+    "components/auth-signup.js": "components/auth-signup.js.map",
+    "components/my-list.js": "components/my-list.js.map",
+    "components/task.js": "components/task.js.map",
+    "components/tasks.js": "components/tasks.js.map",
+    "pages/index.js": "pages/index.js.map",
+    "pages/join.js": "pages/join.js.map",
+    "pages/login.js": "pages/login.js.map",
+    "pages/restPassword.js": "pages/restPassword.js.map",
+    "server.js": "server.js.map"
+  }
+}

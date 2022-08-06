@@ -10,7 +10,6 @@
       justify-content-center
       align-items-center
     "
-    v-if="!emailIsTrue"
   >
     <h3 class="fs-3 fw-bold">Forget Password</h3>
     <p class="text-center text-secondary">
@@ -19,16 +18,18 @@
     </p>
     <input type="text" placeholder="Your Email Address" v-model="email" />
     <div class="err text-danger">{{ forgetError }}</div>
-    <button type="button" @click="restUserAccount">Rest my Password</button>
+    <button type="button"  @click="restUserAccount">
+      Rest my Password
+    </button>
   </div>
 </template>
 
 <script>
 export default {
-  data(){
-    return{
-      email:''
-    }
+  data() {
+    return {
+      email: "",
+    };
   },
   methods: {
     restUserAccount() {
@@ -39,9 +40,7 @@ export default {
     forgetError() {
       return this.$store.state.forgetError;
     },
-    emailIsTrue() {
-      return this.$store.state.emailIsTrue;
-    },
+
   },
 };
 </script>

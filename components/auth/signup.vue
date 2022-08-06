@@ -53,6 +53,10 @@
           @click="chnageConfPassToText($event)"
         ></i>
       </div>
+
+      <nuxt-link to="/login" class="sign-link-sm"
+        >You have account?</nuxt-link
+      >
       <div class="err text-danger">{{ error }}</div>
 
       <button type="button" @click="userSignUp">SIGN Up</button>
@@ -62,7 +66,6 @@
 
 <script>
 export default {
-
   data() {
     return {
       userSign: {
@@ -75,10 +78,10 @@ export default {
       showConfPass: true,
     };
   },
-  mounted(){
+  mounted() {
     let userInfo = localStorage.getItem("user-list-token");
-    if(userInfo){
-      this.$router.push("/")
+    if (userInfo) {
+      this.$router.push("/");
     }
   },
   methods: {

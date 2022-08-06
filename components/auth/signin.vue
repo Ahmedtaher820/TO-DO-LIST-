@@ -38,6 +38,9 @@
       <nuxt-link :to="{ name: 'restPassword' }"
         >Forget your password?</nuxt-link
       >
+      <nuxt-link to="/join" class="sign-link-sm"
+        >You don't have account?</nuxt-link
+      >
       <div class="err text-danger">{{ error }}</div>
       <button type="button" @click="userSignIn">SIGN IN</button>
     </div>
@@ -46,7 +49,6 @@
 
 <script>
 export default {
-
   data() {
     return {
       userLogin: {
@@ -58,7 +60,6 @@ export default {
   },
 
   methods: {
-   
     chnagePassToText(event) {
       let input = event.target.previousElementSibling;
       if (input.getAttribute("type") == "password") {

@@ -1,6 +1,5 @@
 <template>
   <div
-    v-if="emailIsTrue"
     class="
       rest-box
       shadow
@@ -109,9 +108,6 @@ export default {
   },
 
   computed: {
-    emailIsTrue() {
-      return this.$store.state.emailIsTrue;
-    },
     handleUserAccountError() {
       return this.$store.state.handleUserAccountError;
     },

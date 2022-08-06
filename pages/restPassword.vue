@@ -3,8 +3,8 @@
     <h2 class="fs-1 fw-bold text-center pt-5 text-light mb-5">
       Rest Password Form
     </h2>
-    <confirm-email />
-    <confirm-account />
+    <confirm-email v-if="!emailIsTrue" />
+    <confirm-account v-if="emailIsTrue" />
   </div>
 </template>
 
@@ -32,6 +32,11 @@ export default {
     if (userInfo) {
       this.$router.push("/");
     }
+  },
+  computed: {
+    emailIsTrue() {
+      return this.$store.state.emailIsTrue;
+    },
   },
 };
 </script>

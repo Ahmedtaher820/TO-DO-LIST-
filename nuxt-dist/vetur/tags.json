@@ -1,0 +1,29 @@
+{
+  "MyList": {
+    "description": "Auto imported from components/my-list.vue"
+  },
+  "Task": {
+    "description": "Auto imported from components/task.vue"
+  },
+  "Tasks": {
+    "description": "Auto imported from components/tasks.vue"
+  },
+  "AuthConfirmAccount": {
+    "description": "Auto imported from components/auth/confirm-account.vue"
+  },
+  "AuthConfirmEmail": {
+    "description": "Auto imported from components/auth/confirm-email.vue"
+  },
+  "AuthRightBox": {
+    "description": "Auto imported from components/auth/right-box.vue"
+  },
+  "AuthSigninSignup": {
+    "description": "Auto imported from components/auth/signin-signup.vue"
+  },
+  "AuthSignin": {
+    "description": "Auto imported from components/auth/signin.vue"
+  },
+  "AuthSignup": {
+    "description": "Auto imported from components/auth/signup.vue"
+  }
+}

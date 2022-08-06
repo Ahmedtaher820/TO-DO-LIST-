@@ -1,0 +1,26 @@
+[
+  {
+    "name": "join",
+    "path": "/join",
+    "component": "D:\\\\web\\\\myProject\\\\nuxt\\\\NUXT-APPS\\\\to-do-list\\\\pages\\\\join.vue",
+    "chunkName": "pages/join"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "D:\\\\web\\\\myProject\\\\nuxt\\\\NUXT-APPS\\\\to-do-list\\\\pages\\\\login.vue",
+    "chunkName": "pages/login"
+  },
+  {
+    "name": "restPassword",
+    "path": "/restPassword",
+    "component": "D:\\\\web\\\\myProject\\\\nuxt\\\\NUXT-APPS\\\\to-do-list\\\\pages\\\\restPassword.vue",
+    "chunkName": "pages/restPassword"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\web\\\\myProject\\\\nuxt\\\\NUXT-APPS\\\\to-do-list\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  }
+]
