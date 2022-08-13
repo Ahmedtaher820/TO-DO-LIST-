@@ -18,12 +18,16 @@ export default {
   },
   mounted() {
     let userInfo = localStorage.getItem("user-list-token");
+    console.log("done");
     if (userInfo) {
       this.$router.push("/");
       this.$store.commit("setUserLogOut", true);
+      this.$store.commit("setToken", userInfo);
+      this.$store.dispatch("GetAllMyList");
     } else {
       this.$router.push("/login");
       this.$store.commit("setUserLogOut", false);
+      this.$store.commit("setToken", "");
     }
   },
   methods: {
@@ -39,5 +43,4 @@ export default {
 };
 </script>
 <style>
-
 </style>

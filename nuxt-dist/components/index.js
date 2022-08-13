@@ -1,12 +1,13 @@
-export const MyList = () => import('../..\\components\\my-list.vue' /* webpackChunkName: "components/my-list" */).then(c => wrapFunctional(c.default || c))
-export const Task = () => import('../..\\components\\task.vue' /* webpackChunkName: "components/task" */).then(c => wrapFunctional(c.default || c))
-export const Tasks = () => import('../..\\components\\tasks.vue' /* webpackChunkName: "components/tasks" */).then(c => wrapFunctional(c.default || c))
-export const AuthConfirmAccount = () => import('../..\\components\\auth\\confirm-account.vue' /* webpackChunkName: "components/auth-confirm-account" */).then(c => wrapFunctional(c.default || c))
-export const AuthConfirmEmail = () => import('../..\\components\\auth\\confirm-email.vue' /* webpackChunkName: "components/auth-confirm-email" */).then(c => wrapFunctional(c.default || c))
-export const AuthRightBox = () => import('../..\\components\\auth\\right-box.vue' /* webpackChunkName: "components/auth-right-box" */).then(c => wrapFunctional(c.default || c))
-export const AuthSigninSignup = () => import('../..\\components\\auth\\signin-signup.vue' /* webpackChunkName: "components/auth-signin-signup" */).then(c => wrapFunctional(c.default || c))
-export const AuthSignin = () => import('../..\\components\\auth\\signin.vue' /* webpackChunkName: "components/auth-signin" */).then(c => wrapFunctional(c.default || c))
-export const AuthSignup = () => import('../..\\components\\auth\\signup.vue' /* webpackChunkName: "components/auth-signup" */).then(c => wrapFunctional(c.default || c))
+export { default as Loader } from '../..\\components\\global\\loader.vue'
+export { default as MyList } from '../..\\components\\my-list.vue'
+export { default as Task } from '../..\\components\\task.vue'
+export { default as Tasks } from '../..\\components\\tasks.vue'
+export { default as AuthConfirmAccount } from '../..\\components\\auth\\confirm-account.vue'
+export { default as AuthConfirmEmail } from '../..\\components\\auth\\confirm-email.vue'
+export { default as AuthRightBox } from '../..\\components\\auth\\right-box.vue'
+export { default as AuthSigninSignup } from '../..\\components\\auth\\signin-signup.vue'
+export { default as AuthSignin } from '../..\\components\\auth\\signin.vue'
+export { default as AuthSignup } from '../..\\components\\auth\\signup.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

@@ -9,7 +9,7 @@
         p-3
       "
     >
-      <h4 class="fw-bold fs-4 text-dark mb-0"></h4>
+      <h4 class="fw-bold fs-4 text-dark mb-0">{{listName}}</h4>
       <p class="text-secondary mb-0">3 tasks remaning</p>
     </div>
     <div class="tasks-body p-3">
@@ -17,15 +17,18 @@
         <task  />
       </div>
       <div class="add-task pt-2">
-        <form action="" @submit.prevent="addTask">
-          <button class="button-action add-task-btn">+</button>
+        <form>
+          <button class="button-action add-task-btn" :disabled="GetlistId.length == 0" @click.prevent="addTask">+</button>
           <input
             type="text"
             class="new new-task"
             placeholder="enter new task"
-            v-model="taskname"
+            v-model="task.title"
+            @keypress.enter.prevent="addTask"
+            :disabled="GetlistId.length == 0"
           />
         </form>
+        <div class="text-danger mt-3 ps-2">{{errorTask}}</div>
       </div>
     </div>
     <div class="task-footer d-flex justify-content-evenly pt-3">
@@ -39,29 +42,31 @@
 export default {
   data() {
     return {
-      taskname: "",
+      task:{
+        title: "",
+      }
     };
   },
   methods: {
     addTask() {
-      // const allTasks = JSON.parse(localStorage.getItem("lists"));
-      // const v1 = allTasks.find((task) => task.id == this.listTasks.id);
-      // let taskObj = {
-      //   id: Date.now(),
-      //   name: this.taskname,
-      //   complete: false,
-      // };
-      // localStorage.setItem(v1.id, JSON.stringify(taskObj));
-      // console.log(JSON.parse(localStorage.getItem("lists")));
-      // this.taskname = "";
+
+      this.$store.dispatch("addTaskFun",this.task)
+      this.task = ''
     },
   },
   mounted() {
   },
   computed: {
-
+    listName(){
+      return this.$store.state.listName
+    },
+    GetlistId(){
+      return this.$store.state.listId
+    },
+    errorTask(){
+      return this.$store.state.taskError
+    }
   },
-  watch: {},
 };
 </script>
 

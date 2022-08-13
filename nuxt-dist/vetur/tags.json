@@ -1,4 +1,7 @@
 {
+  "Loader": {
+    "description": "Auto imported from components/global/loader.vue"
+  },
   "MyList": {
     "description": "Auto imported from components/my-list.vue"
   },

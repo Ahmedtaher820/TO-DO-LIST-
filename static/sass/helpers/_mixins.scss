@@ -16,3 +16,9 @@
     }
   }
 }
+// mixin for animation
+@mixin keyF($animationName) {
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
