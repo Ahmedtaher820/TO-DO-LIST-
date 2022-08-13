@@ -9,7 +9,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import MyList from "../components/my-list.vue";
 import tasks from "../components/tasks.vue";

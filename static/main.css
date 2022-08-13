@@ -315,6 +315,11 @@ h1 {
   opacity: .7;
 }
 
+.my-list ul.my-lists li.active {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .my-list form .new {
   color: #f1f1f1;
 }

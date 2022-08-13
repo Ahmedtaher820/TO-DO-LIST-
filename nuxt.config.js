@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "to-do-list",
+    title: "To-Do-List",
     htmlAttrs: {
       lang: "en",
     },
@@ -24,6 +24,10 @@ export default {
       {
         rel:"stylesheet",
         href:"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      },
+      {
+        rel:"shortcut icon",
+        href:"https://i.pinimg.com/564x/6e/bf/6f/6ebf6f1eea0f9e8245e1f4a941af2e64--icon-check-kill-list.jpg"
       }
     ],
   },

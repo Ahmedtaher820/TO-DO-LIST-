@@ -1,4 +1,5 @@
 import axios from "axios";
+import swal from "sweetalert";
 export const state = () => ({
   signUpError: "",
   signInError: "",
@@ -12,6 +13,7 @@ export const state = () => ({
   tasks: null,
   listName: "",
   listId: "",
+  taskRemaining: "",
   showLoader: false,
 });
 export const mutations = {
@@ -81,8 +83,21 @@ export const mutations = {
   setLoader(state, payload) {
     state.showLoader = payload;
   },
+  // set task emprty erroe
   setTastEror(state, payload) {
     state.taskError = payload;
+  },
+  // set number of complete task
+  setCompletedTaskNumber(state, payload) {
+    const taskLength = payload.length;
+    let flag = 0;
+    payload.forEach((e) => {
+      console.log(e.completed);
+      if (e.completed == true) {
+        flag++;
+      }
+    });
+    state.taskRemaining = taskLength - flag;
   },
 };
 export const actions = {
@@ -192,22 +207,26 @@ export const actions = {
           },
         }
       );
-      // console.log(listAdded.data.list);
-      // state.myPosts.push(listAdded.data.list);
       dispatch("GetAllMyList");
     } catch (error) {
-      console.log(error.response.data.message);
+      swal({
+        title: "Opps",
+        text: `${error.response.data.message}`,
+        icon: "error",
+        button: "Ok!",
+      });
     }
   },
 
-  async deleteList({ dispatch }, payload) {
+  async deleteList({ state, dispatch }) {
+    console.log(state.listId);
     try {
       await axios.delete(
-        `https://todo-list45.herokuapp.com/api/list/deleteList/${payload}`
+        `https://todo-list45.herokuapp.com/api/list/deleteList/${state.listId}`
       );
-      dispatch("GetAllMyList");
+      location.reload()
     } catch (error) {
-      console.log(error.response.data.message);
+      console.log(error);
     }
   },
   // get tasks
@@ -219,10 +238,12 @@ export const actions = {
       );
       commit("setTasks", gettask.data.task);
       commit("setLoader", false);
-      console.log(gettask);
+      commit("setCompletedTaskNumber", gettask.data.task);
+      console.log(gettask.data.task);
     } catch (error) {
       commit("setLoader", false);
       console.log(error);
+      commit("setTasks", []);
     }
   },
   // add Tasks
@@ -237,7 +258,13 @@ export const actions = {
       commit("setLoader", false);
     } catch (error) {
       commit("setLoader", false);
-      commit("setTastEror", error.response.data.message);
+      // commit("setTastEror", error.response.data.message);
+      swal({
+        title: "Opps!",
+        text: `${error.response.data.message}`,
+        icon: "error",
+        button: "Ok!",
+      });
     }
   },
   // make task completed
@@ -247,15 +274,13 @@ export const actions = {
     const taskcompleteStatus = !payload.taskcompleteStatus;
     console.log(id, taskcompleteStatus);
     try {
-      let completed = await axios.patch(
+      await axios.patch(
         `https://todo-list45.herokuapp.com/api/task/updateTask/${id}/${taskcompleteStatus}`
       );
-      // dispatch("getTasksFun", state.listId);
       commit("setLoader", false);
       dispatch("getTasksFun", state.listId);
     } catch (error) {
       commit("setLoader", false);
-      // commit("setTastEror",error.response.data.message)
     }
   },
 };

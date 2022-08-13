@@ -5,7 +5,7 @@
       <li
         v-for="(listData, index) in allTasks"
         :key="index"
-        @click="getTasks(listData._id,$event)"
+        @click="getTasks(listData._id, $event)"
       >
         {{ listData.list }}
       </li>
@@ -23,7 +23,6 @@
     <loader v-if="showLoader" />
   </div>
 </template>
-
 <script>
 import loader from "./global/loader.vue";
 export default {
@@ -41,12 +40,19 @@ export default {
       this.$store.dispatch("addList", this.list);
       this.list = "";
     },
-    async getTasks(id,event) {
-      console.log(id)
-      const listname = event.target.innerHTML.trim()
+    async getTasks(id, event) {
+      const listname = event.target.innerHTML.trim();
       this.$store.dispatch("getTasksFun", id);
-      this.$store.commit("setListName",listname)
-      this.$store.commit("setListId",id)
+      this.$store.commit("setListName", listname);
+      this.$store.commit("setListId", id);
+      this.removeActive(event.target);
+    },
+    removeActive(elementTarget) {
+      let lists = document.querySelectorAll(".my-lists li");
+      lists.forEach((e) => {
+        e.classList.remove("active");
+      });
+      elementTarget.classList.add("active");
     },
   },
   computed: {

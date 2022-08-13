@@ -1,5 +1,5 @@
 <template>
-  <div class="tasks-container" >
+  <div class="tasks-container">
     <div
       class="
         tasks-heading
@@ -9,16 +9,24 @@
         p-3
       "
     >
-      <h4 class="fw-bold fs-4 text-dark mb-0">{{listName}}</h4>
-      <p class="text-secondary mb-0">3 tasks remaning</p>
+      <h4 class="fw-bold fs-4 text-dark mb-0">{{ listName }}</h4>
+      <p class="text-secondary mb-0">
+        Tasks remaining: <b> {{ taskRemaining }}</b>
+      </p>
     </div>
     <div class="tasks-body p-3">
       <div class="tasks">
-        <task  />
+        <task />
       </div>
       <div class="add-task pt-2">
         <form>
-          <button class="button-action add-task-btn" :disabled="GetlistId.length == 0" @click.prevent="addTask">+</button>
+          <button
+            class="button-action add-task-btn"
+            :disabled="GetlistId.length == 0"
+            @click.prevent="addTask"
+          >
+            +
+          </button>
           <input
             type="text"
             class="new new-task"
@@ -28,12 +36,13 @@
             :disabled="GetlistId.length == 0"
           />
         </form>
-        <div class="text-danger mt-3 ps-2">{{errorTask}}</div>
       </div>
     </div>
     <div class="task-footer d-flex justify-content-evenly pt-3">
       <button>Clear completed tasks</button>
-      <button>Delete list</button>
+      <button :disabled="GetlistId.length == 0" @click="deleteList">
+        Delete list
+      </button>
     </div>
   </div>
 </template>
@@ -42,30 +51,31 @@
 export default {
   data() {
     return {
-      task:{
+      task: {
         title: "",
-      }
+      },
     };
   },
   methods: {
     addTask() {
-
-      this.$store.dispatch("addTaskFun",this.task)
-      this.task = ''
+      this.$store.dispatch("addTaskFun", this.task);
+      this.task.title = "";
+    },
+    deleteList() {
+      this.$store.dispatch("deleteList");
     },
   },
-  mounted() {
-  },
+  mounted() {},
   computed: {
-    listName(){
-      return this.$store.state.listName
+    listName() {
+      return this.$store.state.listName;
     },
-    GetlistId(){
-      return this.$store.state.listId
+    GetlistId() {
+      return this.$store.state.listId;
     },
-    errorTask(){
-      return this.$store.state.taskError
-    }
+    taskRemaining() {
+      return this.$store.state.taskRemaining;
+    },
   },
 };
 </script>
