@@ -92,7 +92,6 @@ export const mutations = {
     const taskLength = payload.length;
     let flag = 0;
     payload.forEach((e) => {
-      console.log(e.completed);
       if (e.completed == true) {
         flag++;
       }
