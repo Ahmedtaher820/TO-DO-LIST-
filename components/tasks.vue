@@ -1,12 +1,14 @@
 <template>
-  <div class="tasks-container">
+  <div class="tasks-container ">
     <div
       class="
         tasks-heading
         d-flex
         align-items-center
         justify-content-between
-        p-3
+        p-md-3
+        px-5
+        py-3
       "
     >
       <h4 class="fw-bold fs-4 text-dark mb-0">{{ listName }}</h4>

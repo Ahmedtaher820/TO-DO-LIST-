@@ -1,8 +1,8 @@
 <template>
   <div class="to-do-list position-relative">
-    <div class="container">
+    <div class="container vh-100">
       <h1 class="to-do-heading text-center fw-bold">Stuff i need to do</h1>
-      <div class="content d-flex justify-content-around mt-4">
+      <div class="content d-flex flex-md-row flex-column  justify-content-around mt-4">
         <My-List />
         <tasks />
       </div>

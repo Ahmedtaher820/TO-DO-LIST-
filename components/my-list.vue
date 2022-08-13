@@ -1,5 +1,5 @@
 <template>
-  <div class="my-list">
+  <div class="my-list mb-4 mb-md-0">
     <h2 class="fs-2 text-light fw-bold">My List</h2>
     <ul class="my-lists mt-4 mb-3">
       <li

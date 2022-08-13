@@ -160,7 +160,13 @@ h1 {
 }
 
 .tasks-container {
-  min-width: 400px;
+  width: 40%;
+}
+
+@media (max-width: 991px) {
+  .tasks-container {
+    width: 100%;
+  }
 }
 
 .tasks-container .tasks-heading {

@@ -1,5 +1,9 @@
 .tasks-container {
-  min-width: 400px;
+  // min-width: 400px;
+  width: 40%;
+  @include media(mobile) {
+    width: 100%;
+  }
   .tasks-heading {
     background-color: rgb(211, 211, 211);
     p {
