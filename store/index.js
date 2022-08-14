@@ -223,7 +223,6 @@ export const actions = {
       await axios.delete(
         `https://todo-list45.herokuapp.com/api/list/deleteList/${state.listId}`
       );
-      location.reload()
     } catch (error) {
       console.log(error);
     }
